@@ -1,0 +1,18 @@
+.fondo1 {
+    background-color: black;
+    height: 300px;
+}
+
+
+.banner1 h2 {
+    justify-content: center;
+    color: white;
+}
+
+.seccion1 {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 20px;
+    padding-right: 20px;
+}

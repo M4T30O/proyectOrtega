@@ -1,0 +1,23 @@
+.container-fluid {
+    background-color: darkred;
+}
+
+.form-control {
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.btn {
+    margin: 5px
+}
+
+.nav-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.li :hover {
+    background-color: white;
+    color: black;
+}

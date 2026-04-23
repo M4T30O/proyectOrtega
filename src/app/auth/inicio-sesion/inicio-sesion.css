@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.formulario {
+    width: 250px;
+    background-color: rgb(231, 230, 230);
+}
+

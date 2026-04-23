@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: auto;
+    height: 250px;
+    margin-top: 20px;
+}
+.lista {
+    list-style: none;
+    margin-top: 20px;
+}
