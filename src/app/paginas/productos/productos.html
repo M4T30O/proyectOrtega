@@ -1,0 +1,19 @@
+<h2>Bienvenido a nuestra seccion de productos</h2>
+
+<div class="container gap-3">
+
+@for (p of Productos ;track p.id) {
+@if (p.disponibilidad) {
+<div class="card" style="width: 18rem;">
+  <img src="{{p.img}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{p.nombre}}</h5>
+    <p class="card-text">{{p.escritor}}</p>
+    <a  class="btn btn-primary" (click) = "verInformacion(p.nombre, p.escritor, p.genero, p.descripcion)">¯\_(ツ)_/¯</a>
+  </div>
+</div>
+}
+
+}
+</div>
+

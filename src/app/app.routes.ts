@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Inicio } from './paginas/inicio/inicio';
 import { Ofertas } from './paginas/ofertas/ofertas';
-import { Producto } from './paginas/producto/producto';
+import { Productos } from './paginas/productos/productos';
 import { Contacto } from './paginas/contacto/contacto';
 import { InicioSesion } from './auth/inicio-sesion/inicio-sesion';
 import { Registro } from './auth/registro/registro';
@@ -12,7 +12,7 @@ export const routes: Routes = [
     { path: '', redirectTo: 'Inicio', pathMatch: 'full' },
     { path: "Inicio", component: Inicio },
     { path: "Ofertas", component: Ofertas },
-    { path: "Producto", component: Producto },
+    { path: "Producto", component: Productos },
     { path: "Contacto", component: Contacto },
     { path: "InicioSesion", component: InicioSesion },
     { path: "Registro", component: Registro },
