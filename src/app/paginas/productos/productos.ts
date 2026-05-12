@@ -19,7 +19,7 @@ export class Productos {
       precio: 2000,
       stock: 5,
       img: "assets/el_viejo_y_el_mar.jpg",
-      genero: "",
+      genero: "Suspenso",
       disponibilidad: true,
     },
     {
@@ -30,7 +30,7 @@ export class Productos {
       precio: 1500,
       stock: 20,
       img: "assets/el_retrato_de_Dorian_Gray.jpg",
-      genero: "",
+      genero: "Drama",
       disponibilidad: true,
     },
     {
@@ -41,7 +41,7 @@ export class Productos {
       precio: 1500,
       stock: 10,
       img: "assets/el_gran_Gatsby.jpg",
-      genero: "",
+      genero: "Tragedia",
       disponibilidad: true,
     },
     {
@@ -52,7 +52,7 @@ export class Productos {
       precio: 2500,
       stock: 15,
       img: "assets/el_faro_del_fin_del_mundo.jpg",
-      genero: "",
+      genero: "Aventura",
       disponibilidad: true,
     },
     {
@@ -63,7 +63,7 @@ export class Productos {
       precio: 2500,
       stock: 10,
       img: "assets/cronica_de_una_muerte_anunciada.jpg",
-      genero: "",
+      genero: "Policiaca",
       disponibilidad: true
     },
     {
@@ -74,7 +74,7 @@ export class Productos {
       precio: 2500,
       stock: 25,
       img: "assets/normal_people.jpg",
-      genero: "",
+      genero: "Drama",
       disponibilidad: true
     }
 

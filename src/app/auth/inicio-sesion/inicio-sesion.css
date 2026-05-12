@@ -1,11 +1,67 @@
-.container {
-    display: flex;
-    justify-content: center;
-    
+
+
+
+/* Estilos generales para el contenedor del formulario */
+form {
+    max-width: 450px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.formulario {
-    width: 250px;
-    background-color: rgb(231, 230, 230);
+/* Estilizado de las etiquetas (Labels) */
+.form-label, label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
 }
 
+/* Mejora de los campos de entrada (Inputs) */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Estilo para el texto de ayuda (Email help) */
+.form-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+/* Estilo para el Checkbox */
+.form-check {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Botón de enviar personalizado */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    background-color: #0d6efd;
+    border: none;
+    transition: background-color 0.3s transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
