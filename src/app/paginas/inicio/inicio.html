@@ -1,38 +1,39 @@
-
-
 <header id="bannerPrincipal">
+
     <div class="bienvenida">
-        <h1 class="titulo">Bienvenido a Libros Don Mateo</h1>
-        <p class="subtitulo"></p>
-        <a routerLink="/InicioSesion" class="btnBienvenida btn">Iniciar Sesion</a>
+        <h1 class="titulo">Libros Don Mateo</h1>
+        <p class="subtitulo">Encuentra tu próxima gran aventura entre nuestras páginas.</p>
+        <a routerLink="/InicioSesion" class="btnBienvenida">Iniciar Sesión</a>
     </div>
 </header>
 
-<div id="seccion1" class="container-fluid">
-    <div class="card featured-card">
-        <img src="" class="card-img-top" alt="">
-        <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
-            <a routerLink="" class="btn btn-primary"></a>
+<section id="seccion1" class="container-fluid">
+    <!-- He agregado contenido a la primera tarjeta que estaba vacía -->
+    <div class="card featured-card shadow-sm">
+        <img src="" class="card-img-top" alt="Novedades">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Novedades</h5>
+            <p class="card-text">Descubre los títulos más recientes que han llegado a nuestra estantería.</p>
+            <!-- mt-auto empuja el botón al final si los textos tienen distinto largo -->
+            <a routerLink="/Novedades" class="btn btn-primary mt-auto">Ver Novedades</a>
         </div>
     </div>
 
-    <div class="card featured-card">
+    <div class="card featured-card shadow-sm">
         <img src="" class="card-img-top" alt="Ofertas">
-        <div class="card-body">
-            <h5 class="card-title">Ofertas</h5>
-            <p class="card-text">Revise nuestra seccion de ofertas si le interesa</p>
-            <a routerLink="/Ofertas" class="btn btn-primary">Ir a Ofertas</a>
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Ofertas Especiales</h5>
+            <p class="card-text">Aprovecha descuentos exclusivos en una selección de clásicos y bestsellers.</p>
+            <a routerLink="/Ofertas" class="btn btn-primary mt-auto">Ir a Ofertas</a>
         </div>
     </div>
 
-    <div class="card featured-card">
-        <img src="" class="card-img-top" alt="">
-        <div class="card-body">
+    <div class="card featured-card shadow-sm">
+        <img src="" class="card-img-top" alt="Géneros">
+        <div class="card-body d-flex flex-column">
             <h5 class="card-title">Explora por Géneros</h5>
-            <p class="card-text">Busque entre nuestros productos sus libros favoritos de cada genero.</p>
-            <a routerLink="" class="btn btn-primary">Ver Géneros</a>
+            <p class="card-text">Desde misterio hasta ciencia ficción, tenemos el género perfecto para ti.</p>
+            <a routerLink="/Generos" class="btn btn-primary mt-auto">Ver Géneros</a>
         </div>
     </div>
-</div>
+</section>
