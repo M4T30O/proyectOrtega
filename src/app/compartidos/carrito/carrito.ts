@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CarritoServicio } from '../../servicios/carrito-servicio';
 
 @Component({
   selector: 'app-carrito',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './carrito.css',
 })
 export class Carrito {
-  
+  svc = inject(CarritoServicio)
 }
