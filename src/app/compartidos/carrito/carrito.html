@@ -1,4 +1,3 @@
-
 <table class="table">
     <thead>
         <tr>
@@ -8,11 +7,33 @@
             <th scope="col">Precio</th>
         </tr>
     </thead>
+
     <tbody>
-       
+        @for (p of productosEnCarrito;track p.id) {
+        <tr>
+            <th class="row"></th>
+            <div>
+                <td><img src="{{p.img}}" alt=""></td>
+            </div>
+            <td>{{p.nombre}}</td>
+            <td>{{p.descripcion}}</td>
+            <td>{{p.precio}}</td>
+            <div class="btn">
+                <button (click)="disminuir(p.id)">-</button>
+                <button (click)="aumentar(p.id)">+</button>
+            </div>
+            <td>{{p.cant}}</td>
+
+
+        </tr>
+        }
+
     </tbody>
+
+
 </table>
+
 <div class="container">
     <button class="btn btn-primary">Comprar</button>
-    <button class="btn btn-danger bi bi-trash3"></button>
+    <button class="btn btn-danger bi bi-trash3" ></button>
 </div>

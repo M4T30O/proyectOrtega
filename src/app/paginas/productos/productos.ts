@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Producto } from '../../models/productos';
 import { CommonModule } from '@angular/common';
+import { CarritoServicio } from '../../servicios/carrito-servicio';
 
 @Component({
   selector: 'app-productos',
@@ -10,7 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class Productos {
 
-  Productos : Producto [] = [
+  constructor(
+    private CarritoService: CarritoServicio
+  ) { }
+
+  Productos: Producto[] = [
     {
       id: 1,
       nombre: "El viejo y el mar",
@@ -21,6 +26,7 @@ export class Productos {
       img: "assets/el_viejo_y_el_mar.jpg",
       genero: "Suspenso",
       disponibilidad: true,
+      cant: 100,
     },
     {
       id: 2,
@@ -32,6 +38,7 @@ export class Productos {
       img: "assets/el_retrato_de_Dorian_Gray.jpg",
       genero: "Drama",
       disponibilidad: true,
+      cant: 100,
     },
     {
       id: 3,
@@ -43,6 +50,7 @@ export class Productos {
       img: "assets/el_gran_Gatsby.jpg",
       genero: "Tragedia",
       disponibilidad: true,
+      cant: 100,
     },
     {
       id: 4,
@@ -54,6 +62,7 @@ export class Productos {
       img: "assets/el_faro_del_fin_del_mundo.jpg",
       genero: "Aventura",
       disponibilidad: true,
+      cant: 100,
     },
     {
       id: 5,
@@ -64,7 +73,8 @@ export class Productos {
       stock: 10,
       img: "assets/cronica_de_una_muerte_anunciada.jpg",
       genero: "Policiaca",
-      disponibilidad: true
+      disponibilidad: true,
+      cant: 100,
     },
     {
       id: 6,
@@ -75,14 +85,59 @@ export class Productos {
       stock: 25,
       img: "assets/normal_people.jpg",
       genero: "Drama",
-      disponibilidad: true
+      disponibilidad: true,
+      cant: 100,
+    },
+    {
+      id: 7,
+      nombre: "Arsenio Lupin, caballero ladrón",
+      escritor: "Maurice Leblanc",
+      descripcion: "Arsenio Lupin, un brillante ladrón de guante blanco, maestro del disfraz y experto en artes marciales. A diferencia de los criminales comunes, Lupin es un caballero muy educado que solo roba a la clase alta y corrupta.",
+      precio: 2500,
+      stock: 90,
+      img: "assets/Lupin.jpg",
+      genero: "Misterio, policiaca",
+      disponibilidad: true,
+      cant: 100,
+    },
+    {
+      id: 8,
+      nombre: "Mi planta de naranja lima",
+      escritor: "José Mauro de Vasconcelos",
+      descripcion: "José Mauro de Vasconcelos recreó sus recuerdos de infancia en el barrio carioca de Bangú con un lirismo y una ternura",
+      precio: 5000,
+      stock: 25,
+      img: "assets/mi_planta_de_naranja_lima.jpg",
+      genero: "Drama",
+      disponibilidad: true,
+      cant: 100,
+    },
+    {
+      id: 9,
+      nombre: "El hombre invisible",
+      escritor: " H. G. Wells",
+      descripcion: "narra la historia de un joven y ambicioso científico que averigua cómo hacer que los objetos y los seres vivos se vuelvan invisibles.",
+      precio: 5000,
+      stock: 30,
+      img: "assets/el_hombre_invisible.jpg",
+      genero: "Suspenso",
+      disponibilidad: true,
+      cant: 100,
     }
 
 
-    
+
+
   ]
   
-   verInformacion(nombre: String, escritor: string, genero: string, descripcion: string) {
+  agregarCarrito(p: Producto, nombre: string) {
+    this.CarritoService.agregarLibro(p);
+    
+    alert(`Se ha agregado el producto ${nombre}`)
+  }
+
+
+  verInformacion(nombre: String, escritor: string, genero: string, descripcion: string) {
     alert(`${nombre} \nEscritor: ${escritor}, \ngenero: ${genero} \nDescripcion: ${descripcion}`)
   }
 

@@ -8,4 +8,5 @@ export interface Producto {
     img: string;
     genero: string;
     disponibilidad: boolean;
+    cant: number;
 }
