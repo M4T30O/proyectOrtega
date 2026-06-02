@@ -1,1 +1,15 @@
-<p>favoritos works!</p>
+<div class="container">
+    @for (p of productosFavoritos ;track p.id) {
+    @if (p.disponibilidad) {
+    <div class="card" style="width: 18rem;">
+        <img src="{{p.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{p.nombre}}</h5>
+            <p class="card-text">{{p.escritor}}</p>
+            <p class="card-text"><b>${{p.precio}}</b></p>
+            <a class="btn btn-primary" (click)="agregarCarrito(p, p.nombre)">Agregar</a>
+        </div>
+    </div>
+    }
+    }
+</div>

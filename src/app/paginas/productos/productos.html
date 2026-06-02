@@ -10,8 +10,7 @@
       <h5 class="card-title">{{p.nombre}}</h5>
       <p class="card-text">{{p.escritor}}</p>
       <p class="card-text"><b>${{p.precio}}</b></p>
-      <a href="" class="bi bi-heart"></a>
-      <i class="bi bi-heart-fill"></i>
+      <button class="{{p.favorito ? 'bi bi-heart-fill' : 'bi bi-heart'}}" (click)="agregarFavorito(p, p.nombre)"></button>
       <a class="btn btn-primary" (click)="verInformacion(p.nombre, p.escritor, p.genero, p.descripcion)">¯\_(ツ)_/¯</a>
       <a class="btn btn-primary" (click)="agregarCarrito(p, p.nombre)">Agregar al carrito</a>
 
@@ -20,3 +19,4 @@
   }
   }
 </div>
+

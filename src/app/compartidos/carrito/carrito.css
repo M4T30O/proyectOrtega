@@ -4,6 +4,7 @@
 }
 
 .btn {
+    display: flex;
     margin: 3px;
 }
 

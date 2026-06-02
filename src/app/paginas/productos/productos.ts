@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Producto } from '../../models/productos';
 import { CommonModule } from '@angular/common';
 import { CarritoServicio } from '../../servicios/carrito-servicio';
+import { FavoritoServicio } from '../../servicios/favorito-servicio';
 
 @Component({
   selector: 'app-productos',
@@ -12,7 +13,9 @@ import { CarritoServicio } from '../../servicios/carrito-servicio';
 export class Productos {
 
   constructor(
-    private CarritoService: CarritoServicio
+    private CarritoService: CarritoServicio,
+    private favoritosService: FavoritoServicio
+
   ) { }
 
   Productos: Producto[] = [
@@ -26,7 +29,8 @@ export class Productos {
       img: "assets/el_viejo_y_el_mar.jpg",
       genero: "Suspenso",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true
     },
     {
       id: 2,
@@ -38,7 +42,8 @@ export class Productos {
       img: "assets/el_retrato_de_Dorian_Gray.jpg",
       genero: "Drama",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true
     },
     {
       id: 3,
@@ -50,7 +55,8 @@ export class Productos {
       img: "assets/el_gran_Gatsby.jpg",
       genero: "Tragedia",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true,
     },
     {
       id: 4,
@@ -62,7 +68,8 @@ export class Productos {
       img: "assets/el_faro_del_fin_del_mundo.jpg",
       genero: "Aventura",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true,
     },
     {
       id: 5,
@@ -74,7 +81,8 @@ export class Productos {
       img: "assets/cronica_de_una_muerte_anunciada.jpg",
       genero: "Policiaca",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true,
     },
     {
       id: 6,
@@ -86,7 +94,8 @@ export class Productos {
       img: "assets/normal_people.jpg",
       genero: "Drama",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true,
     },
     {
       id: 7,
@@ -98,7 +107,8 @@ export class Productos {
       img: "assets/Lupin.jpg",
       genero: "Misterio, policiaca",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true,
     },
     {
       id: 8,
@@ -110,7 +120,8 @@ export class Productos {
       img: "assets/mi_planta_de_naranja_lima.jpg",
       genero: "Drama",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true,
     },
     {
       id: 9,
@@ -122,18 +133,26 @@ export class Productos {
       img: "assets/el_hombre_invisible.jpg",
       genero: "Suspenso",
       disponibilidad: true,
-      cant: 100,
+      cant: 1,
+      favorito: true
     }
 
 
 
 
   ]
-  
+
   agregarCarrito(p: Producto, nombre: string) {
     this.CarritoService.agregarLibro(p);
+
+    alert(`Se ha agregado al carrito el producto ${nombre}`)
+  }
+
+  agregarFavorito(p: Producto, nombre: string) {
+    this.favoritosService.agregarLibro(p);
+
+    alert(`Se ha agregado a favoritos`)
     
-    alert(`Se ha agregado el producto ${nombre}`)
   }
 
 

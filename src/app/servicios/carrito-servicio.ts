@@ -43,4 +43,8 @@ export class CarritoServicio {
       this.carritoArray.filter(p => p.id !== id);
   }
 
+  vaciarCarrito() {
+    this.carritoArray=[]
+  }
+
 }

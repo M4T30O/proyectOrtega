@@ -9,4 +9,5 @@ export interface Producto {
     genero: string;
     disponibilidad: boolean;
     cant: number;
+    favorito: boolean
 }
