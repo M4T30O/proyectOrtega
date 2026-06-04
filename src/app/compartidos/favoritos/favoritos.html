@@ -1,4 +1,8 @@
 <div class="container">
+    @if(productosFavoritos.length === 0){
+    <p style="display: flex; justify-content: center;">No hay productos en favoritos</p>
+    }
+
     @for (p of productosFavoritos ;track p.id) {
     @if (p.disponibilidad) {
     <div class="card" style="width: 18rem;">
@@ -7,7 +11,8 @@
             <h5 class="card-title">{{p.nombre}}</h5>
             <p class="card-text">{{p.escritor}}</p>
             <p class="card-text"><b>${{p.precio}}</b></p>
-            <a class="btn btn-primary" (click)="agregarCarrito(p, p.nombre)">Agregar</a>
+            <a class="btn btn-primary" (click)="agregarCarrito(p)">Agregar al carrito</a>
+            <a class="btn btn-primary" (click)="eliminar(p.id)">eliminar</a>
         </div>
     </div>
     }

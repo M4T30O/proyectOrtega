@@ -24,23 +24,14 @@ export class Favoritos implements OnInit {
     this.productosFavoritos = this.favoritoserv.obtenerLibros();
   }
 
-  aumentar(id: number) {
-    this.favoritoserv.aumentarLecturas(id)
-  }
-
-  disminuir(id: number) {
-    this.favoritoserv.disminuirLecturas(id)
-  }
-
-  eliminarTodo(id: number) {
+  eliminar(id: number) {
     this.favoritoserv.eliminarLibro(id)
   }
 
 
-  agregarCarrito(p: Producto, nombre: string) {
+  agregarCarrito(p: Producto) {
     this.CarritoService.agregarLibro(p);
 
-    alert(`Se ha agregado el producto ${nombre}`)
   }
 
 

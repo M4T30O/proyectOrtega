@@ -1,5 +1,5 @@
 @if(productosEnCarrito.length === 0){
-    <p style="display: flex; justify-content: center;">No hay productos en el carrito</p>
+<p style="display: flex; justify-content: center;">No hay productos en el carrito</p>
 }
 
 @else {
@@ -22,14 +22,17 @@
             </div>
             <td>{{p.nombre}}</td>
             <td>{{p.descripcion}}</td>
-            <td>{{p.precio}}</td>
-            <div class="btn">
+            <td>{{p.precio*p.cant}}</td>
+            <td class="btn">
                 <button class="btn" (click)="disminuir(p.id)">-</button>
                 <button class="btn" (click)="aumentar(p.id)">+</button>
-            </div>
+            </td>
             <td>{{p.cant}}</td>
+            <td>
+                <button class="btn" (click)="eliminarLibro(p.id)">Eliminar</button>
+            </td>
         </tr>
-        
+
         }
 
     </tbody>

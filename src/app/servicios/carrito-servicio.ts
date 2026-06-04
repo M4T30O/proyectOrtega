@@ -10,7 +10,16 @@ export class CarritoServicio {
 
   //Agregar carrito
   agregarLibro(p: Producto) {
-    this.carritoArray.push(p);
+    const Libroexiste = this.carritoArray.find(d => d.id === p.id)
+    if (Libroexiste) {
+      alert("El libro ya se esta en el carrito")
+    } else {
+      this.carritoArray.push(p);
+      alert(`Se ha agregado al carrito`)
+
+
+    }
+
   }
 
   // READ
@@ -44,7 +53,6 @@ export class CarritoServicio {
   }
 
   vaciarCarrito() {
-    this.carritoArray=[]
+    this.carritoArray = []
   }
-
 }

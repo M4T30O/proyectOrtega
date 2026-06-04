@@ -138,26 +138,23 @@ export class Productos {
     }
 
 
-
-
   ]
 
-  agregarCarrito(p: Producto, nombre: string) {
+
+  agregarCarrito(p: Producto) {
     this.CarritoService.agregarLibro(p);
 
-    alert(`Se ha agregado al carrito el producto ${nombre}`)
   }
 
-  agregarFavorito(p: Producto, nombre: string) {
+  agregarFavorito(p: Producto) {
     this.favoritosService.agregarLibro(p);
 
-    alert(`Se ha agregado a favoritos`)
-    
+
   }
 
 
   verInformacion(nombre: String, escritor: string, genero: string, descripcion: string) {
-    alert(`${nombre} \nEscritor: ${escritor}, \ngenero: ${genero} \nDescripcion: ${descripcion}`)
+    alert(`Titulo: ${nombre} \nEscritor: ${escritor}, \ngenero: ${genero} \nDescripcion: ${descripcion}`)
   }
 
 

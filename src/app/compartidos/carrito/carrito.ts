@@ -31,6 +31,10 @@ export class Carrito implements OnInit {
     this.Carritoserv.vaciarCarrito()
   }
 
+  eliminarLibro(id: number) {
+    this.Carritoserv.eliminarLibro(id)
+  }
+
   comprar() {
     alert(`Se ha realizado la compra`)
   }

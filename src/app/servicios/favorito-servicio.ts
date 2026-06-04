@@ -12,6 +12,7 @@ export class FavoritoServicio {
   //Agregar carrito
   agregarLibro(p: Producto) {
     this.favoritosArray.push(p);
+    alert("Se ha agregado a favoritos")
   }
 
   // READ
