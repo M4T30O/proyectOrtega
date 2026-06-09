@@ -13,7 +13,7 @@ export class Carrito implements OnInit {
 
   constructor(
     private Carritoserv: CarritoServicio
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.productosEnCarrito = this.Carritoserv.obtenerLibros();
@@ -29,17 +29,20 @@ export class Carrito implements OnInit {
 
   eliminarTodo() {
     this.Carritoserv.vaciarCarrito()
+    this.productosEnCarrito = this.Carritoserv.obtenerLibros()
+
   }
 
   eliminarLibro(id: number) {
     this.Carritoserv.eliminarLibro(id)
+    this.productosEnCarrito = this.Carritoserv.obtenerLibros()
   }
 
   comprar() {
     alert(`Se ha realizado la compra`)
   }
 
-  
+
 
 
   svc = inject(CarritoServicio)

@@ -26,6 +26,7 @@ export class Favoritos implements OnInit {
 
   eliminar(id: number) {
     this.favoritoserv.eliminarLibro(id)
+    this.productosFavoritos = this.favoritoserv.obtenerLibros()
   }
 
 
