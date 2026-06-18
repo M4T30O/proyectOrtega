@@ -10,7 +10,11 @@
       <h5 class="card-title">{{p.nombre}}</h5>
       <p class="card-text">{{p.escritor}}</p>
       <p class="card-text"><b>${{p.precio}}</b></p>
-      <a class="{{p.favorito ? 'bi bi-heart' : 'bi bi-heart-fill'}}" (click)="agregarFavorito(p)"></a>
+      @if (p.favorito === true) {
+        <i class="bi bi-heart" (click)="agregarFavorito(p)  "></i>
+      } @else {
+        <i class="bi bi-heart-fill" (click)="eliminarFavorito(p)"></i>
+      }
       <a class="btn btn-primary" (click)="verInformacion(p.nombre, p.escritor, p.genero, p.descripcion)">Informacion</a>
       <a class="btn btn-primary" (click)="agregarCarrito(p)">Agregar al carrito</a>
 

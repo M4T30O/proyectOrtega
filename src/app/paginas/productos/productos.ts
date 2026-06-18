@@ -17,6 +17,7 @@ export class Productos {
     private favoritosService: FavoritoServicio
 
   ) { }
+  
 
   Productos: Producto[] = [
     {
@@ -149,7 +150,15 @@ export class Productos {
   agregarFavorito(p: Producto) {
     this.favoritosService.agregarLibro(p);
 
+    if(p.favorito == true){
+      p.favorito = false;
+    }
+  }
 
+  eliminarFavorito(p: Producto) {
+    this.favoritosService.eliminarLibro(p.id);
+
+    p.favorito = true;
   }
 
 

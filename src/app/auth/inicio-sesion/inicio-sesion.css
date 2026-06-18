@@ -1,5 +1,8 @@
-
-
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #343a40;
+}
 
 /* Estilos generales para el contenedor del formulario */
 form {

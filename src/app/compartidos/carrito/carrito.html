@@ -22,7 +22,7 @@
             </div>
             <td>{{p.nombre}}</td>
             <td>{{p.descripcion}}</td>
-            <td>{{p.precio*p.cant}}</td>
+            <td>${{p.precio*p.cant}}</td>
             <td>
                 <button class="btn" (click)="disminuir(p.id)">-</button>
                 <button class="btn" (click)="aumentar(p.id)">+</button>

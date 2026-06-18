@@ -20,27 +20,32 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/Favoritos">Favoritos</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" routerLink="/Contacto">Contacto</a>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Otros</button>
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/InicioSesion">Inicio Sesion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/Registro">Registro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/Contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <i class="bi bi-cart2 nav-link" routerLink="/Carrito"></i>
         </li>
       </ul>
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-success" type="submit">Search</button>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/InicioSesion">Inicio Sesion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/Registro">Registro</a>
-          </li>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        </ul>
-      </form>
+
+      </ul>
 
     </div>
   </div>
