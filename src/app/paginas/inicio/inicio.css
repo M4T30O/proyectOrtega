@@ -28,7 +28,6 @@
 .subtitulo {
     font-size: 1.3rem;
     margin-bottom: 35px;
-    font-style: italic;
     opacity: 0.9;
 }
 
@@ -88,7 +87,7 @@
 }
 
 .card:hover .card-img-top {
-    transform: scale(1.08); /* Zoom suave a la imagen */
+    transform: scale(1.08); 
 }
 
 .card-body {
