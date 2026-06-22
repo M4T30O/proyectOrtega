@@ -1,26 +1,30 @@
-<h2>Bienvenido a nuestra seccion de productos</h2>
-
-<div class="container gap-3">
-
-  @for (p of Productos ;track p.id) {
-  @if (p.disponibilidad) {
-  <div class="card" style="width: 18rem;">
-    <img src="{{p.img}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{p.nombre}}</h5>
-      <p class="card-text">{{p.escritor}}</p>
-      <p class="card-text"><b>${{p.precio}}</b></p>
-      @if (p.favorito === true) {
-        <i class="bi bi-heart" (click)="agregarFavorito(p)  "></i>
-      } @else {
-        <i class="bi bi-heart-fill" (click)="eliminarFavorito(p)"></i>
-      }
-      <a class="btn btn-primary" (click)="verInformacion(p.nombre, p.escritor, p.genero, p.descripcion)">Informacion</a>
-      <a class="btn btn-primary" (click)="agregarCarrito(p)">Agregar al carrito</a>
-
-    </div>
+<section class="productos-seccion">
+  <div class="productos-header">
+    <h2 class="titulo-principal">Bienvenido a nuestra sección de productos</h2>
+    <p class="subtitulo-seccion">Descubre nuestra selección exclusiva pensada para ti</p>
+    <div class="linea-decorativa"></div>
   </div>
-  }
-  }
-</div>
 
+  <div class="container">
+
+    @for (p of Productos ;track p.id) {
+      @if (p.disponibilidad) {
+      <div class="card">
+        <img src="{{p.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{p.nombre}}</h5>
+          <p class="card-text">{{p.escritor}}</p>
+          <p class="card-text"><b>${{p.precio}}</b></p>
+          @if (p.favorito === true) {
+          <i class="bi bi-heart" (click)="agregarFavorito(p)"></i>
+          } @else {
+          <i class="bi bi-heart-fill" (click)="eliminarFavorito(p)"></i>
+          }
+          <a class="btn btn-primary" (click)="verInformacion(p.nombre, p.escritor, p.genero, p.descripcion)">Informacion</a>
+          <a class="btn btn-primary" (click)="agregarCarrito(p)">Agregar al carrito</a>
+        </div>
+      </div>
+      }
+    }
+  </div>
+</section>

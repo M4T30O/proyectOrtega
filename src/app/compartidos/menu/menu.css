@@ -1,26 +1,61 @@
+.navbar {
+    background-color: #3a5a40 !important; 
+    padding: 0.5rem 1rem;
+}
 
+.navbar-nav .nav-link {
+    color: #e0eedb !important; 
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 4px;
+    transition: all 0.3s ease; 
+}
 
-.container-fluid {
+.navbar-nav .nav-link:hover {
+    background-color: #a3b18a; 
+    color: #1b4332 !important; 
+}
+
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+.dropdown-toggle {
+    color: #e0eedb !important;
+    border: none;
+    background: transparent;
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+    background-color: #a3b18a !important;
+    color: #1b4332 !important;
+}
+
+.dropdown-menu {
     background-color: #3a5a40;
+    border: 1px solid #2f483a;
 }
 
-.form-control {
-    margin: 10px;
-    border-radius: 25px;
+.dropdown-menu .nav-link {
+    color: #e0eedb !important;
 }
 
-.btn {
-    margin: 5px
+.dropdown-menu .nav-link:hover {
+    background-color: #a3b18a !important;
+    color: #1b4332 !important;
 }
 
-.nav-item {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.bi-cart2 {
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-
-.li :hover {
-    background-color: white;
-    color: black;
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5) !important;
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}

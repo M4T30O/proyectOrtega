@@ -1,15 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/Inicio" routerLinkAction="active"><img src="assets/gif logo.gif" alt=""
-        height="50rem" width="60rem"></a>
+    <a class="navbar-brand" routerLink="/Inicio" routerLinkActive="active">
+      <img src="assets/gif logo.gif" alt="Logo" height="50rem" width="60rem">
+    </a>
+    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="Inicio">Inicio</a>
+          <a class="nav-link active" routerLink="Inicio">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/Producto">Productos</a>
@@ -20,31 +24,24 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/Favoritos">Favoritos</a>
         </li>
-
         <li class="nav-item">
           <div class="dropdown">
-            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Otros</button>
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Otros</button>
             <ul class="dropdown-menu">
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/InicioSesion">Inicio Sesion</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/Registro">Registro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="/Contacto">Contacto</a>
-              </li>
+              <li><a class="dropdown-item nav-link" routerLink="/InicioSesion">Inicio Sesion</a></li>
+              <li><a class="dropdown-item nav-link" routerLink="/Registro">Registro</a></li>
+              <li><a class="dropdown-item nav-link" routerLink="/Contacto">Contacto</a></li>
             </ul>
           </div>
         </li>
-        <li class="nav-item">
-          <i class="bi bi-cart2 nav-link" routerLink="/Carrito"></i>
-        </li>
       </ul>
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
+      <ul class="navbar-nav mb-2 mb-lg-0 alinear-carrito">
+        <li class="nav-item">
+          <a class="nav-link posicion-carrito" routerLink="/Carrito">
+            <i class="bi bi-cart2"></i>
+          </a>
+        </li>
       </ul>
 
     </div>

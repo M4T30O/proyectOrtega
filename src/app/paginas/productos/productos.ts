@@ -157,8 +157,9 @@ export class Productos {
 
   eliminarFavorito(p: Producto) {
     this.favoritosService.eliminarLibro(p.id);
-
     p.favorito = true;
+    alert("Se ha eliminado de favoritos")
+
   }
 
 

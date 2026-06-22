@@ -1,91 +1,130 @@
 #bannerPrincipal {
-    background-color: darkslategrey;
+    /* Fondo con un sutil gradiente sobre el darkslategrey para mayor profundidad */
+    background: linear-gradient(rgba(47, 79, 79, 0.85), rgba(47, 79, 79, 0.95)), 
+                url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80') center/cover;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .bienvenida {
-    padding: 40px;
-    border-radius: 12px;
+    padding: 20px;
     max-width: 700px;
 }
 
 .titulo {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .subtitulo {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.3rem;
+    margin-bottom: 35px;
     font-style: italic;
+    opacity: 0.9;
 }
 
 .btnBienvenida {
-    background-color: #344e41; 
+    background-color: #3a5a40; /* El verde de tu navbar */
     color: white;
-    padding: 15px 35px;
+    padding: 14px 40px;
     border-radius: 50px; 
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-    border: 2px solid transparent;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .btnBienvenida:hover {
     background-color: #a3b18a;
-    color: #344e41;
+    color: #1b4332;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
+/* --- Sección de Tarjetas --- */
 #seccion1 {
     display: flex;
     justify-content: center;
     gap: 30px;
-    background-color: #fdfdfd;
+    background-color: #f4f6f4; 
+    padding: 60px 20px;
     flex-wrap: wrap;
 }
 
 .card {
     border: none;
-    border-radius: 15px;
+    border-radius: 16px;
     overflow: hidden;
     flex: 1 1 300px;
-    max-width: 350px;
-    background: #fff;
+    max-width: 360px;
+    background: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.img-container {
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 .card:hover .card-img-top {
-    transform: scale(1.1);
+    transform: scale(1.08); /* Zoom suave a la imagen */
 }
 
 .card-body {
-    padding: 25px;
+    padding: 30px 25px;
     text-align: center;
 }
 
 .card-title {
     font-weight: 700;
-    color: #2b2d42;
+    font-size: 1.3rem;
+    color: #3a5a40; 
+    margin-bottom: 12px;
 }
 
+.card-text {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Botones de las tarjetas alineados al diseño general */
 .btn-primary {
-    background-color: #2b2d42;
+    background-color: #3a5a40;
+    color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 0.9rem;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #dad7cd;
-    color: black;
-    transform: translateY(-3px);
+    background-color: #a3b18a !important;
+    color: #1b4332 !important;
 }
