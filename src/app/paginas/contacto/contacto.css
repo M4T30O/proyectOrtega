@@ -60,29 +60,98 @@
 }
 
 
+/* Contenedor Principal */
 .ubicacion {
-    text-align: center;
-    padding: 50px 0;
-}
-
-.uTitulo {
-    font-size: 40px;
-    color: white;
-    margin-bottom: 40px;
-    font-weight: 700;
-}
-
-.mapa {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    border: 8px solid #333;
+    background-color: #f4f4f6; /* Un gris más moderno y limpio que el #aca1a1 */
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
     border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    
+    /* Flexbox moderno y responsivo */
+    display: flex;
+    flex-direction: column; 
+    gap: 40px;
+    align-items: center;
 }
 
-.img {
+/* Título (por si lo usas) */
+.uTitulo {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 24px;
+    font-weight: 700;
+    text-align: center;
     width: 100%;
-    height: 450px border 0px
+}
+
+/* Contenedor del Mapa */
+.mapa {
+    width: 100%;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hacer que el iframe sea completamente responsivo dentro de .mapa */
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Contenedor del Formulario */
+.formulario {
+    width: 100%;
+    text-align: left; /* Los formularios se leen mejor alineados a la izquierda */
+}
+
+/* Estilos para etiquetas del formulario */
+.form-label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Media Query: De pantallas medianas (tablets/laptops) en adelante se muestra en 2 columnas */
+@media (min-width: 768px) {
+    .ubicacion {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch; /* Hace que el mapa y el form tengan la misma altura */
+    }
+
+    .mapa, .formulario {
+        flex: 1; /* Cada uno toma el 50% del espacio disponible */
+        width: 50%;
+    }
+    
+    .mapa {
+        height: auto; /* Se adapta a la altura del formulario */
+    }
+}
+
+
+/* Botón de enviar personalizado */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    background-color: #0d6efd;
+    border: none;
+    transition: background-color 0.3s transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
 }

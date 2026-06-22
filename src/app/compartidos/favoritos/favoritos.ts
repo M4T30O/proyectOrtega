@@ -37,3 +37,4 @@ export class Favoritos implements OnInit {
 
 
 }
+

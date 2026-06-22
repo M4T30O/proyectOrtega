@@ -98,3 +98,11 @@
 .btn-danger:hover {
     background-color: #f03e3e;
 }
+
+.tituloP {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 700;
+}

@@ -28,6 +28,9 @@ export class Carrito implements OnInit {
   }
 
   eliminarTodo() {
+
+
+
     this.Carritoserv.vaciarCarrito()
     this.productosEnCarrito = this.Carritoserv.obtenerLibros()
 
@@ -40,7 +43,7 @@ export class Carrito implements OnInit {
 
   comprar() {
 
-      alert(`Se ha realizado con exito la compra.\nMuchas gracias. `)
+      alert(`Se ha realizado con exito la compra. \nMuchas gracias.`)
       this.Carritoserv.vaciarCarrito()
       this.productosEnCarrito = this.Carritoserv.obtenerLibros()
   }
