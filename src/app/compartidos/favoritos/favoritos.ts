@@ -20,10 +20,14 @@ export class Favoritos implements OnInit {
   ) { }
 
 
+
+  
   ngOnInit() {
     this.productosFavoritos = this.favoritoserv.obtenerLibros();
   }
 
+
+  //DELETE
   eliminar(id: number) {
     this.favoritoserv.eliminarLibro(id)
     this.productosFavoritos = this.favoritoserv.obtenerLibros()

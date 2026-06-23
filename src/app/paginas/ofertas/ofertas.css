@@ -1,0 +1,60 @@
+/* ==========================================================================
+   MEJORAS DEL CARRUSEL (Sin modificar el HTML)
+   ========================================================================== */
+
+/* 1. Contenedor principal: Bordes redondeados, sombra moderna y separación */
+.carruselContainer {
+  margin-bottom: 3rem;
+  border-radius: 16px;
+  overflow: hidden; /* Crucial para que las imágenes respeten las esquinas redondeadas */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.carruselContainer:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* 2. Control de las imágenes: Evita deformaciones y saltos de tamaño */
+.carruselContainer .carousel-inner img {
+  height: 460px;
+  object-fit: cover; /* Recorta y adapta la imagen sin estirarla */
+  object-position: center;
+}
+
+/* Ajuste de altura para pantallas medianas (tablets) y móviles */
+@media (max-width: 992px) {
+  .carruselContainer .carousel-inner img {
+    height: 320px;
+  }
+}
+@media (max-width: 576px) {
+  .carruselContainer .carousel-inner img {
+    height: 220px;
+  }
+}
+
+/* 3. Estilizado de las flechas: Mayor visibilidad sobre cualquier fondo */
+.carruselContainer .carousel-control-prev,
+.carruselContainer .carousel-control-next {
+  width: 12%; /* Zona de click ligeramente más cómoda */
+  opacity: 0; /* Ocultas por defecto para un look limpio */
+  transition: opacity 0.3s ease;
+}
+
+/* Aparecen suavemente cuando el usuario pasa el mouse sobre el carrusel */
+.carruselContainer:hover .carousel-control-prev,
+.carruselContainer:hover .carousel-control-next {
+  opacity: 1;
+}
+
+/* Fondo circular semi-transparente para los iconos de las flechas */
+.carruselContainer .carousel-control-prev-icon,
+.carruselContainer .carousel-control-next-icon {
+  background-color: rgba(33, 37, 41, 0.3); /* Fondo oscuro sutil */
+  padding: 1.5rem;
+  border-radius: 50%;
+  background-size: 50%; /* Icono centrado y elegante */
+  backdrop-filter: blur(4px); /* Efecto vidrio esmerilado moderno */
+  transition: background-color 0.2
+}

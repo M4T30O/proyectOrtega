@@ -8,7 +8,7 @@ import { Producto } from '../models/productos';
 export class CarritoServicio {
   carritoArray: Producto[] = [];
 
-  //Agregar carrito
+  //Create
   agregarLibro(p: Producto) {
     const Libroexiste = this.carritoArray.find(d => d.id === p.id)
     if (Libroexiste) {
@@ -27,7 +27,7 @@ export class CarritoServicio {
     return this.carritoArray;
   }
 
-  //Aumentar cantidad
+  //Update
   aumentarLecturas(id: number) {
     const libro =
       this.carritoArray.find(p => p.id === id);
@@ -36,7 +36,7 @@ export class CarritoServicio {
     }
   }
 
-  //Disminuir cantidad
+  //Update
   disminuirLecturas(id: number) {
     const libro =
       this.carritoArray.find(p => p.id === id);
@@ -46,7 +46,7 @@ export class CarritoServicio {
   }
 
 
-  //Eliminar
+  //Delete
   eliminarLibro(id: number) {
     this.carritoArray =
       this.carritoArray.filter(p => p.id !== id);

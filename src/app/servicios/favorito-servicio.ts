@@ -9,7 +9,7 @@ export class FavoritoServicio {
   favoritosArray: Producto[] = [];
 
   
-  //Agregar carrito
+  //CREATE
   agregarLibro(p: Producto) {
     this.favoritosArray.push(p);
     alert("Se ha agregado a favoritos")
@@ -20,7 +20,7 @@ export class FavoritoServicio {
     return this.favoritosArray;
   }
 
-  //Aumentar cantidad
+  //UPDATE
   aumentarLecturas(id: number) {
     const libro =
       this.favoritosArray.find(p => p.id === id);
@@ -29,7 +29,7 @@ export class FavoritoServicio {
     }
   }
 
-  //Disminuir cantidad
+  //UPDATE
   disminuirLecturas(id: number) {
     const libro =
       this.favoritosArray.find(p => p.id === id);
@@ -39,7 +39,7 @@ export class FavoritoServicio {
   }
 
 
-  //Eliminar
+  //DELETE
   eliminarLibro(id: number) {
     this.favoritosArray =
       this.favoritosArray.filter(p => p.id !== id);

@@ -19,30 +19,29 @@ export class Carrito implements OnInit {
     this.productosEnCarrito = this.Carritoserv.obtenerLibros();
   }
 
+  //UPDATE
   aumentar(id: number) {
     this.Carritoserv.aumentarLecturas(id)
   }
 
+  //UPDATE
   disminuir(id: number) {
     this.Carritoserv.disminuirLecturas(id)
   }
 
   eliminarTodo() {
-
-
-
     this.Carritoserv.vaciarCarrito()
     this.productosEnCarrito = this.Carritoserv.obtenerLibros()
 
   }
 
+  //DELETE
   eliminarLibro(id: number) {
     this.Carritoserv.eliminarLibro(id)
     this.productosEnCarrito = this.Carritoserv.obtenerLibros()
   }
 
   comprar() {
-
       alert(`Se ha realizado con exito la compra. \nMuchas gracias.`)
       this.Carritoserv.vaciarCarrito()
       this.productosEnCarrito = this.Carritoserv.obtenerLibros()

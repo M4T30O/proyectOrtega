@@ -26,16 +26,6 @@
     margin-bottom: 20px;
 }
 
-/* Línea sutil decorativa debajo del título */
-.linea-decorativa {
-    width: 60px;
-    height: 4px;
-    background-color: #588157;
-    /* Combinando con tu hover verde */
-    margin: 0 auto;
-    border-radius: 2px;
-}
-
 
 
 .container {
